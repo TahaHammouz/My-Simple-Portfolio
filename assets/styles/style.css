@@ -1,0 +1,602 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --Grey: #445964;
+  --DarkGrey: #263138;
+  --SoftGrey: #dfdfdf;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  font-style: normal;
+}
+body {
+  background: #fbfbfb;
+}
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--DarkGrey);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+}
+/* NavBar */
+
+section {
+  padding: 100px 200px;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 94px;
+}
+
+.main h2 {
+  color: var(--DarkGrey);
+  font-size: 1.4em;
+  font-weight: 500;
+  line-height: 53px;
+}
+
+.main h2 span {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--DarkGrey);
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.main h3 {
+  color: var(--Grey);
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 18px;
+}
+
+.social-icons a {
+  padding-right: 20px;
+  align-items: center;
+}
+.social-icons a img {
+  width: 39.92px;
+  height: 39.92px;
+}
+
+.programmer {
+  width: 705px;
+  height: 697px;
+}
+/* Home */
+.Aboutme {
+  padding: 55px;
+  min-height: 100vh;
+}
+.whoiam {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 21px;
+}
+.whoiam img {
+  width: 183px;
+  height: 207px;
+}
+.whoiam h4 {
+  width: 504px;
+  height: 75px;
+  font-weight: 900;
+  font-size: 64px;
+}
+.whoiam h4 span {
+  color: var(--DarkGrey);
+  font-weight: 900;
+  font-size: 64px;
+}
+.whoiam h4 span span {
+  color: var(--Grey);
+  font-weight: 900;
+  font-size: 64px;
+}
+.whoiam p {
+  color: var(--Grey);
+  max-width: 1032px;
+  font-weight: 500;
+  font-size: 24px;
+  height: 56px;
+}
+.skillsContainter {
+  margin-top: 140px;
+}
+
+.Aboutme h2 {
+  max-width: 316px;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 70px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+}
+.Aboutme h2 span {
+  color: var(--DarkGrey);
+  font-weight: 900;
+  font-size: 64px;
+}
+.Aboutme h2 span span {
+  color: var(--Grey);
+  font-weight: 900;
+  font-size: 64px;
+}
+.Aboutme h4 {
+  line-height: 40px;
+}
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 998px;
+  gap: 50px;
+  justify-content: center;
+  margin: auto;
+  margin-top: -100px;
+}
+
+.skills p {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+}
+.skills img {
+  width: 30px;
+  height: 33px;
+  flex: 1 0 21%;
+  margin: px;
+}
+.box {
+  width: 170px;
+  height: 98px;
+}
+.box p {
+  text-align: center;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--Grey);
+}
+/* Techs */
+.techs h4 {
+  text-align: center;
+}
+.techs h4 span {
+  color: var(--DarkGrey);
+  font-weight: 900;
+  font-size: 64px;
+}
+.techs h4 span span {
+  color: var(--Grey);
+  font-weight: 900;
+  font-size: 64px;
+}
+.used {
+  padding: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.used p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--Grey);
+}
+.techs p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+.techs h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--Grey);
+  font-weight: bold;
+}
+.alreadyused {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.alreadyused img {
+  width: 90px;
+  height: 90px;
+  align-items: center;
+}
+
+.learnmore {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.learnmore p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--Grey);
+}
+.learnmore h2 span {
+  color: var(--Grey);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+}
+.learnmore h2 span span {
+  color: var(--DarkGrey);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.developing {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.developing img {
+  width: 90px;
+  height: 90px;
+  align-items: center;
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: auto;
+    justify-content: space-evenly;
+  }
+  .main h2 {
+    line-height: 45px;
+  }
+
+  .logo {
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-top: 6px;
+  }
+  .navigation a {
+    padding-left: 10px;
+  }
+  .main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main h3 {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 17px;
+  }
+  .Aboutme {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main h2 {
+    color: var(--DarkGrey);
+    font-size: 1.4em;
+    font-weight: 500;
+    
+  }
+
+  .main h2 span {
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+
+  .main h3 {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .social-icons a {
+    padding-right: 20px;
+  }
+  .social-icons a img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .programmer {
+    width: 400px;
+    height: 350px;
+  }
+
+  .whoiam h4 {
+    width: 190px;
+    height: 75px;
+    font-weight: 700;
+    font-size: 64px;
+  }
+  .whoiam h4 span {
+    font-weight: 900;
+    font-size: 64px;
+  }
+  .whoiam h4 span span {
+    font-weight: 700;
+    font-size: 50px;
+  }
+  .whoiam p {
+    max-width: 576px;
+    font-weight: 200;
+    font-size: 25px;
+    height: 56px;
+    padding-top: 100px;
+  }
+  .whoiam h2 {
+    padding-top: 220px;
+  }
+  .Aboutme h2 span {
+    font-weight: 900;
+    font-size: 55px;
+  }
+  .Aboutme h2 span span {
+    font-weight: 900;
+    font-size: 55px;
+  }
+
+  .skills {
+    max-width: 576px;
+    gap: 5px;
+    margin-top: -100px;
+  }
+  .used {
+    padding: 10px;
+    margin: 10px;
+  }
+  .used p {
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .techs p {
+    font-weight: 500;
+    font-size: 24px;
+  }
+  .techs {
+    padding: 120px;
+  }
+  .alreadyused {
+    gap: 2px;
+  }
+  .alreadyused img {
+    width: 70px;
+    height: 70px;
+    align-items: center;
+  }
+  .learnmore {
+    padding: 10px;
+    gap: 5px;
+  }
+  .learnmore h2 span {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .learnmore h2 span span {
+    font-size: 30px;
+  }
+
+  .developing {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  .developing img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 1142px) {
+  .main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.footer {
+  background-color: var(--SoftGrey);
+  color: #fff;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--DarkGrey);
+}
+
+.footer-title span {
+  color: var(--DarkGrey);
+}
+
+.footer .social-icons a {
+  font-size: 1.3em;
+  padding: 0 12px 0 0;
+}
